@@ -94,7 +94,7 @@ nav {
     letter-spacing: 1pxs;
     font-size: 48px;
     line-height: 106%;
-    padding-top: 10%;
+    padding-top: 5%;
 }
 #hero-section span {
     color: #e6198e;
@@ -104,6 +104,19 @@ nav {
     padding-top: 5%;
     color: grey;
     font-size: 1.2em;
+}
+.cta {
+    padding: 10px 45px;
+    color: #FFF;
+    background-image: linear-gradient(to top, #E6198E, #EB47A5);
+    border-radius: 30px;
+    /* transition: all ease-in-out 0.25s; */
+}
+.cta:hover {
+    color: #FFF;
+    box-shadow: 4px 4px 6px rgba(0,0,0,0.3);
+    background-image: linear-gradient(to top, #EB47A5, #E6198E);
+    /* padding: 10px 55px; */
 }
 .hero-wave {
     background-color: #f7f7f7;
