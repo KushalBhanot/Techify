@@ -1,0 +1,111 @@
+@import url("https://use.typekit.net/ojv4ekx.css");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "europa",sans-serif;
+  box-sizing: border-box;
+  outline:none;
+}
+/* #e6198e */
+/* Color Codes & Other Variables */
+:root {
+    --primary: #ffb32c;
+    --primary-variant: #F89F00;
+    --text: #000;
+    --text-variant: #fff;
+    --highlight: #8EE619;
+}
+
+/* overall adjustments */
+html {
+    scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+}
+.container-fluid {
+    padding: 3% 10%;
+}
+.container-fluid-hero {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 10%;
+}
+.selectDisable {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+} 
+::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+/* Navigation Bar */
+nav {
+   background: var(--text-variant);
+   color: var(--primary-variant);
+   z-index: 1;
+}
+.navbar {
+    /* padding: 0 0 4.5rem;  */
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #e6198e;
+}
+.nav-item:hover {
+    border-bottom: 2px solid var(--primary-variant);
+}
+.nav-link {
+    font-size: 1.5 rem;
+    font-weight: normal;
+    color: var(--primary-variant);
+}
+.navbar-toggler i {
+    color: var(--primary-variant);
+}
+.navbar-brand:hover , .nav-link:hover, .navbar-toggler i:hover {
+    color: #e6198e;
+}
+
+/* hero section */
+#hero-section {
+    height: 90vh;
+    background-color: #f7f7f7;
+}
+#hero-section h1 {
+    color: #F17C1C;
+    letter-spacing: 1pxs;
+    font-size: 48px;
+    line-height: 106%;
+    padding-top: 10%;
+}
+#hero-section span {
+    color: #e6198e;
+    font-size: 1.4em;
+}
+#hero-section p {
+    padding-top: 5%;
+    color: grey;
+    font-size: 1.2em;
+}
+.hero-wave {
+    background-color: #f7f7f7;
+    margin-top: -200px;
+}
