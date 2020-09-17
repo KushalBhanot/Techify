@@ -1,71 +1,124 @@
-<!DOCTYPE html>
-<html lang="en">
+@import url("https://use.typekit.net/ojv4ekx.css");
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Techify</title>
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "europa",sans-serif;
+  box-sizing: border-box;
+  outline:none;
+}
+/* #e6198e */
+/* Color Codes & Other Variables */
+:root {
+    --primary: #ffb32c;
+    --primary-variant: #F89F00;
+    --text: #000;
+    --text-variant: #fff;
+    --highlight: #8EE619;
+}
 
-    <!-- bootstrap css -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <!-- aos css -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <!-- custom stylesheet -->
-    <link rel="stylesheet" href="styles.css">
+/* overall adjustments */
+html {
+    scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+}
+.container-fluid {
+    padding: 3% 10%;
+}
+.container-fluid-hero {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 10%;
+}
+.selectDisable {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
 
-    <!-- Font awesome -->
-    <script src="https://kit.fontawesome.com/9b54928ef1.js" crossorigin="anonymous"></script>
-    <!-- Bootstrap scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
-</head>
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+} 
+::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
 
-<body>
-    <nav class="navbar navbar-expand-lg selectDisable">
-        <a class="navbar-brand" href="index.html">
-            TECHIFY
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link px-4" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link px-4" href="products.html">Products</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link px-4" href="resources.html">Resources</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+/* Navigation Bar */
+nav {
+   background: var(--text-variant);
+   color: var(--primary-variant);
+   z-index: 1;
+}
+.navbar {
+    /* padding: 0 0 4.5rem;  */
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #e6198e;
+}
+.nav-item:hover {
+    border-bottom: 2px solid var(--primary-variant);
+}
+.nav-link {
+    font-size: 1.5 rem;
+    font-weight: normal;
+    color: var(--primary-variant);
+}
+.navbar-toggler i {
+    color: var(--primary-variant);
+}
+.navbar-brand:hover , .nav-link:hover, .navbar-toggler i:hover {
+    color: #e6198e;
+}
 
-    <section id="hero-section">
-        <div class="container-fluid-hero">
-            <div class="row">
-                <div class="col-lg-6">
-                    <h1>Empowering women across communities to get started in tech<span>.</span></h1>
-                    <p>We see you, we hear you and we empower you!</p>
-                </div>
-                <div class="col-lg-6 hero-image">
-                    <img class="image-fluid w-100" src="assets/images/Hero Image.gif" alt="Hero Image">
-                </div>
-            </div>
-        </div>
-        <img class="hero-wave" src="assets/svg/wave (10).svg" alt="techify-hero-wave">
-    </section>
-</body>
-
-</html>
+/* hero section */
+#hero-section {
+    height: 90vh;
+    background-color: #f7f7f7;
+}
+#hero-section h1 {
+    color: #F17C1C;
+    letter-spacing: 1pxs;
+    font-size: 48px;
+    line-height: 106%;
+    padding-top: 5%;
+}
+#hero-section span {
+    color: #e6198e;
+    font-size: 1.4em;
+}
+#hero-section p {
+    padding-top: 5%;
+    color: grey;
+    font-size: 1.2em;
+}
+.cta {
+    padding: 10px 45px;
+    color: #FFF;
+    background-image: linear-gradient(to top, #E6198E, #EB47A5);
+    border-radius: 30px;
+    /* transition: all ease-in-out 0.25s; */
+}
+.cta:hover {
+    color: #FFF;
+    box-shadow: 4px 4px 6px rgba(0,0,0,0.3);
+    background-image: linear-gradient(to top, #EB47A5, #E6198E);
+    /* padding: 10px 55px; */
+}
+.hero-wave {
+    background-color: #f7f7f7;
+    margin-top: -200px;
+}
