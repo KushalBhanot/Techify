@@ -3,6 +3,6 @@
 - It also lists all the tech events and scholarships that girls studying in universities and colleges can apply to.
 
 ## ToDo
-- [] Landing page UI/UX
+- [] Landing page UI/UX :: Kushal
 - [] Products
 - [] Resources
