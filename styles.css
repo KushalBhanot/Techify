@@ -350,3 +350,31 @@ footer a:hover {
     background-color: #381e56;
     padding: 10% 8%;
 }
+
+/* signup */
+#signup-form {
+    padding-top: 1%;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-bottom: 8%;
+}
+#signup-form h1 {
+    color: #381e56;
+}
+#signup-form h1 a:hover {
+    text-decoration: none;
+}
+#signup-form h3 {
+    font-weight: bold;
+    padding-top: 10px;
+}
+#signup-form p {
+    color: grey;
+}
+#signup-form .extra {
+    text-align: center;
+    padding-top: 20px;
+}
+#signup-form a {
+    color: #381e56;
+}
