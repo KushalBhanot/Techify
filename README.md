@@ -7,6 +7,12 @@ This platform is designed to connect women all over the world where they can get
 
 **Production:** https://techify-kdc.herokuapp.com/
 
+##### [Desktop]
+<img src="https://github.com/KushalBhanot/Techify/blob/master/Screenshots/Desktop%20View.png" width="80%">
+
+##### [Mobile]
+<img src="https://github.com/KushalBhanot/Techify/blob/master/Screenshots/Mobile%20View.png" width="20%">
+
 ## Contributions to this repo are WELCOME ⚡️🙌🏻
 - :art: give suggestions on how to improve the UI design
 - :hammer: try to break the website by testing it to find any bugs. If you find any, check if there is an issue already open for it, if there is none, then report it 
