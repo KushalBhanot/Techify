@@ -154,7 +154,7 @@ nav {
 @media only screen and (max-width: 990px) {
     #hero-section {
         background-image: url('assets/hero-background.png');
-        background-size: 80%;
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
         height: 90vh;
