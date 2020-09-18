@@ -293,6 +293,9 @@ footer a:hover {
 #login-form h1 {
     color: #381e56;
 }
+#login-form h1 a:hover {
+    text-decoration: none;
+}
 #login-form h3 {
     font-weight: bold;
     padding-top: 50px;
