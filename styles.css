@@ -211,6 +211,7 @@ nav {
 #description-section {
     background-color: #F5F5F9;
     text-align: center;
+    padding-bottom: 200px;
 }
 #description-section h1 {
     margin-top: 100px;
@@ -250,4 +251,25 @@ nav {
 .description-cta:hover {
     color: #e6198e;
     background-color: transparent;
+}
+
+/* footer */
+footer {
+    background-color: #e6198e;
+}
+footer h1:hover {
+    color: var(--text-variant);
+}
+#back-to-top:hover {
+    color: var(--text-variant);
+}
+footer p {
+    color: #F5F5F5;
+}
+footer a {
+    color: #F5F5F5;
+}
+footer a:hover {
+    color: orange;
+    text-decoration: none;
 }
