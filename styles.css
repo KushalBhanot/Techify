@@ -99,6 +99,8 @@ nav {
 }
 /* hero section */
 #hero-section {
+    position: relative;
+    bottom: 0;
     height: 90vh;
     background-color: #f7f7f7;
 }
