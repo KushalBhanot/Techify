@@ -231,11 +231,11 @@ nav {
     opacity: 0.9;
     margin-bottom: 50px;
 }
-/* @media only screen and (max-width: 990px) {
+@media only screen and (max-width: 328px) {
     #description-section p {
-        padding: 0;
+        padding: 0 10%;
     }
-} */
+}
 #description-section .fa-calendar-check {
     color: #EF9425;
 }
