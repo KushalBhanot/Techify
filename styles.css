@@ -78,7 +78,7 @@ nav {
     color: var(--primary-variant);
 }
 .navbar-toggler i {
-    color: var(--primary-variant);
+    color: #e6198e;
 }
 .navbar-brand:hover , .nav-link:hover, .navbar-toggler i:hover {
     color: #e6198e;
