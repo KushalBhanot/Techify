@@ -89,6 +89,10 @@ nav {
     height: 90vh;
     background-color: #f7f7f7;
 }
+.hero-intro {
+    position: relative;
+    z-index: 5;
+}
 #hero-section h1 {
     color: #F17C1C;
     letter-spacing: 1pxs;
@@ -119,7 +123,72 @@ nav {
     background-image: linear-gradient(to top, #EB47A5, #E6198E);
     /* padding: 10px 55px; */
 }
+.hero-image {
+    z-index: 3;
+}
 .hero-wave {
     background-color: #f7f7f7;
     margin-top: -200px;
+    position: absolute;
+    bottom: 0;
+}
+@media only screen and (max-width: 992px) {
+    .hero-image {
+        display: none;
+    }
+    .hero-wave {
+        display: none;
+    }
+    #hero-section {
+        padding-right: 10%;
+    }
+    #hero-section h1 {
+        font-size: normal;
+        color: #fa7f34;
+    }
+    #hero-section p {
+        padding-top: 50px;
+        font-size: normal;
+    }
+}
+@media only screen and (max-width: 990px) {
+    #hero-section {
+        background-image: url('assets/hero-background.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 90vh;
+    }
+    #hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(0,0,0,0.45);
+    }
+    #hero-section h1 {
+        margin-top: 5%;
+        font-size: normal;
+        color: orange;
+    }
+    #hero-section p {
+        color: seashell;
+        padding-top: 20px;
+        font-size: normal;
+    }
+    .cta {
+        margin-top: 2%;
+    }
+}
+@media only screen and (min-width: 880px) and (max-width: 1165px) {
+    #hero-section {
+        padding-top: 5vh; 
+    };
+}
+@media only screen and (max-width: 768px) {
+    #hero-section {
+        padding-top: 5%;
+    }
 }
