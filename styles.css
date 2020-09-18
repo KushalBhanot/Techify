@@ -273,3 +273,8 @@ footer a:hover {
     color: orange;
     text-decoration: none;
 }
+@media only screen and (max-width: 990px) {
+    footer {
+        text-align: center;
+    }
+}
