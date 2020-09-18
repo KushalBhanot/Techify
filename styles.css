@@ -278,3 +278,49 @@ footer a:hover {
         text-align: center;
     }
 }
+
+/* login */
+#login {
+    height: 100vh;
+    overflow: hidden;
+}
+#login-form {
+    padding-top: 5%;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-bottom: 8%;
+}
+#login-form h1 {
+    color: #381e56;
+}
+#login-form h3 {
+    font-weight: bold;
+    padding-top: 50px;
+}
+#login-form p {
+    color: grey;
+}
+.submit-btn {
+    color: #F5F5F5;
+    padding: 10px 45px;
+    background-color: rgba(56, 30, 86, 0.7);
+    margin-top: 30px;
+}
+.submit-btn:hover {
+    padding: 10px 55px;
+    color: var(--text-variant);
+    background-color: rgba(56, 30, 86, 0.9);
+}
+#login-form .extra {
+    text-align: center;
+    padding-top: 20px;
+}
+#login-form a {
+    color: #381e56;
+}
+#login-img {
+    position: relative;
+    bottom: 0;
+    background-color: #381e56;
+    padding: 10% 8%;
+}
