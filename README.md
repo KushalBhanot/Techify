@@ -3,6 +3,8 @@
 # TECHIFY - Built during HackForWomen 2020 under 12 hours
 This platform is designed to connect women all over the world where they can get all information related to the tech and can share their ideas. They can get resources as per their need and can connect with other women to work upon their ideas. It can also be used by women to sell their homemade products which will help them in their economic growth.
 #
+**YouTube Link:** https://www.youtube.com/watch?v=JsMcYSJdkLg
+
 **Production:** https://techify-kdc.herokuapp.com/
 
 ## Contributions to this repo are WELCOME ⚡️🙌🏻
@@ -18,7 +20,7 @@ This platform is designed to connect women all over the world where they can get
 - [x] Products Page
 - [x] Ideas Page 
 - [x] PPT explanation
-- [] Video explanation
+- [x] Video explanation
 
 ## Steps to be followed in order to make valid contributions ☘️
 
