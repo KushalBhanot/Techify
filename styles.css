@@ -154,7 +154,7 @@ nav {
 @media only screen and (max-width: 990px) {
     #hero-section {
         background-image: url('assets/hero-background.png');
-        background-size: cover;
+        background-size: 80%;
         background-repeat: no-repeat;
         background-position: center;
         height: 90vh;
@@ -170,7 +170,7 @@ nav {
     }
     #hero-section h1 {
         margin-top: 5%;
-        font-size: normal;
+        font-size: 2.5em;
         color: orange;
     }
     #hero-section p {
