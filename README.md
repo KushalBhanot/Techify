@@ -1,13 +1,12 @@
 
   
 # TECHIFY - Built during HackForWomen 2020 under 12 hours
--   Techify is a platform for empowering women by allowing them to get customers for their products.
--   It also lists all the tech events and scholarships that girls studying in universities and colleges can apply to.
+This platform is designed to connect women all over the world where they can get all information related to the tech and can share their ideas. They can get resources as per their need and can connect with other women to work upon their ideas. It can also be used by women to sell their homemade products which will help them in their economic growth.
 #
 **Develop:**
-https://techify.vercel.app/
+https://techify-2020.netlify.app/
 
-**Production:** 
+**Production:** https://techify.vercel.app/
 
 ## Contributions to this repo are WELCOME ⚡️🙌🏻
 - :art: give suggestions on how to improve the UI design
@@ -18,7 +17,7 @@ https://techify.vercel.app/
 - [x] Home Page
 - [x] Login Page
 - [x] Signup Page
-- [] Resources Page
+- [x] Resources Page
 - [] Products Page
 - [] Ideas Page 
 - [] PPT explanation
