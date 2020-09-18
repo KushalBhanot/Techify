@@ -69,7 +69,7 @@ nav {
     font-weight: bolder;
     color: #e6198e;
 }
-.nav-item:hover {
+.navlink-border:hover {
     border-bottom: 2px solid var(--primary-variant);
 }
 .nav-link {
@@ -83,7 +83,20 @@ nav {
 .navbar-brand:hover , .nav-link:hover, .navbar-toggler i:hover {
     color: #e6198e;
 }
-
+.login-btn {
+    color: var(--text-variant);
+    background-image: linear-gradient(134deg,#e6198e, #e6198e, var(--primary-variant));
+    border-radius: 30px;
+    padding: 10px 45px;
+}
+.login-btn:hover {
+    border: none;
+    color: var(--text-variant);
+     background-image: linear-gradient(134deg, var(--primary-variant),#e6198e,#e6198e);
+     box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    border-radius: 30px;
+    padding: 10px 45px;
+}
 /* hero section */
 #hero-section {
     height: 90vh;
