@@ -231,9 +231,9 @@ nav {
     opacity: 0.9;
     margin-bottom: 50px;
 }
-@media only screen and (max-width: 328px) {
+@media only screen and (max-width: 768px) {
     #description-section p {
-        padding: 0 10%;
+        padding: 0 5%;
     }
 }
 #description-section .fa-calendar-check {
