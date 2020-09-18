@@ -15,9 +15,9 @@ This platform is designed to connect women all over the world where they can get
 - [x] Login Page
 - [x] Signup Page
 - [x] Resources Page
-- [] Products Page
-- [] Ideas Page 
-- [] PPT explanation
+- [x] Products Page
+- [x] Ideas Page 
+- [x] PPT explanation
 - [] Video explanation
 
 ## Steps to be followed in order to make valid contributions ☘️
