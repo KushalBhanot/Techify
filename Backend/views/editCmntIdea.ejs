@@ -1,0 +1,29 @@
+<%- include("partials/header") %>
+    <section id="login">
+        <div class="row">
+            <div id="login-form" class="col-lg-6">
+                <h1><a href="/home">TECHIFY</a></h1>
+                <h3>Hello!</h3>
+                <p>Edit Comment</p>
+
+                <form action="/ideas/<%= idea_id %>/comments/<%= comment._id %>?_method=PUT" method="POST">
+                    <div class="form-group">
+                        <label for="username">Comment</label>
+                        <input type="text" name="comment[text]" value="<%= comment.text %>" class="form-control" id="username">
+                    </div>
+                    
+                 
+                    <button type="submit" class="btn submit-btn">Submit</button>
+
+                    
+                </form>
+            </div>
+            <div id="login-img" class="col-lg-6">
+                <img width="100%" src="/assets/login-hero.gif" alt="login-hero">
+            </div>
+        </div>
+        </div>
+    </section>
+</body>
+
+</html>

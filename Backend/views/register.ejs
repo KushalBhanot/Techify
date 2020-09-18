@@ -1,0 +1,42 @@
+<%- include("partials/header") %>
+    <section id="login">
+        <div class="row">
+            <div id="signup-form" class="col-lg-6">
+                <h1><a href="/home">TECHIFY</a></h1>
+                <h3>Hello!</h3>
+                <p>Sign up to get started</p>
+
+                <form action="/register" method="POST">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input placeholder="JohnWick" type="text" name="name"class="form-control" id="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your e-mail</label>
+                        <input placeholder="name@domain.com" type="email" name="username" class="form-control" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password</label>
+                        <input placeholder="at least 8 characters" type="password" name="password" class="form-control" id="pwd">
+                    </div>
+                    <div class="form-group">
+                        <label for="dp">Profile Picture</label>
+                        <input placeholder="url" type="text" name="userImage" class="form-control" id="dp">
+                    </div>
+                    <!-- <div class="checkbox">
+                        <label><input type="checkbox"> I agree with the Terms and conditions</label>
+                    </div> -->
+                    <button type="submit" class="btn submit-btn">Sign up</button>
+
+                    <p class="extra">Already have an account? <a href="/login">Sign In</a></p>
+                </form>
+            </div>
+            <div id="login-img" class="col-lg-6">
+                <img width="100%" src="/assets/login-hero.gif" alt="login-hero">
+            </div>
+        </div>
+        </div>
+    </section>
+</body>
+
+</html>

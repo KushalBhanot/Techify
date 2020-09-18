@@ -1,0 +1,37 @@
+<%- include("partials/header") %>
+    <section id="login">
+        <div class="row">
+            <div id="login-form" class="col-lg-6">
+                <h1><a href="/home">TECHIFY</a></h1>
+                <h3>Log in.</h3>
+                <p>Log in with your data that you enetered during your resgistration.</p>
+
+                <form action="/login" method="POST">
+                    <div class="form-group">
+                        <label for="email">Your e-mail</label>
+                        <input placeholder="name@domain.com" type="email" class="form-control" name="username" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password</label>
+                        <input placeholder="at least 8 characters" type="password" class="form-control" name="password" id="pwd">
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox"> Keep me signed in</label>
+                    </div>
+                    <button type="submit" class="btn submit-btn">Log in</button>
+
+                    <p class="extra">Dont't have an account? <a href="/register">Sign Up</a></p>
+                    <p style="text-align: center;"><a
+                            href="mailto:developerkushalb@gmail.com?subject=Forgot Password for TECHIFY&body=Hey! Please help me out ASAP.">Forgot
+                            Password?</a></p>
+                </form>
+            </div>
+            <div id="login-img" class="col-lg-6">
+                <img width="100%" src="/assets/login-hero.gif" alt="login-hero">
+            </div>
+        </div>
+        </div>
+    </section>
+</body>
+
+</html>

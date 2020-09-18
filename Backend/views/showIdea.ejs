@@ -1,0 +1,185 @@
+<%- include("partials/header") %>
+<nav class="navbar navbar-expand-lg selectDisable">
+    <a class="navbar-brand" href="/home">
+        TECHIFY
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link px-4" href="/home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-4" href="/products">Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-4" href="/resources">Resources</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-4 active" href="/ideas">Ideas</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <% if(error && error.length > 0) { %>
+        <div class="alert alert-danger alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <h5><%= error %></h5>
+        </div>
+    <% } %>
+    <% if(success && success.length > 0) { %>
+        <div class="alert alert-success alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <h5><%= success %></h5>
+        </div>
+    <% } %>
+</div>
+ <div class="container mt-5 mb-5" style="display: flex;justify-content: center;align-items: center;">
+        <div class="card w-100" id="idea-card">
+            <div class="card-header" style="text-align:center;"><%= idea.author.name %>, <%= idea.createdAt.toDateString() %></div>
+            <div class="card-body" style="display: flex;justify-content: space-between;">
+            <div class="card-body-container" style="display: flex;justify-content: space-between;">
+                <div class="like-group">
+                    <div style="padding-bottom: 10px;">
+                        <form action="/ideas/<%= idea._id %>/likes" method="POST">
+                            <div class="btn-parent">
+                                
+                            <div class="btn-group" style="display: flex;flex-direction: column;justify-content: space-between;">
+                                
+                                <% if (currentUser && idea.likes.some((like) => { %>
+                                   <% return like.equals(currentUser._id); %>
+                                <% })) { %>
+                                <div style="display:flex;flex-direction:column;justify-content: space-between;">
+                                    <button class="btn btn-sm" style="color : white;display: flex;flex-direction: column;">
+                                        <i class="fas fa-angle-double-up"></i> 
+                                    </button>
+                                    <button type="button" class="btn btn-sm btn-light" data-toggle="modal"
+                                    data-target="#blogLikes"><%= idea.likes.length %>
+                                    </button>
+                                    <button class="btn btn-sm" style="color : white;display: flex;flex-direction: column;" disabled>
+                                        <i class="fas fa-angle-double-down"></i> 
+                                    </button>
+                                </div>
+                                <% } else { %>
+                                <div style="display:flex;flex-direction:column;justify-content: space-between;">
+                                <button class="btn btn-sm" style="color : white;display: flex;flex-direction: column;">
+                                    <i class="fas fa-angle-double-up"></i> 
+                                </button>
+                                <button type="button" class="btn btn-sm btn-light" data-toggle="modal"
+                                        data-target="#blogLikes"><%= idea.likes.length %>
+                                </button>
+                               
+                                <button class="btn btn-sm " style="color : white;display: flex;flex-direction: column;" disabled>
+                                    <i class="fas fa-angle-double-down"></i> 
+                                </button>
+                                </div>
+                                <% } %>
+                                
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                   
+                </div>
+                <div style="display: flex;flex-direction:column;justify-content:center;margin-left:5%;">
+                    <div class="card_heading">
+                        <h5 class="card-title"><%= idea.title %></h5>
+                        
+                    </div>
+                
+                    <p class="card-text mt-4" style="text-align: left;"><%= idea.body %></p>
+                </div>
+            </div>
+            
+            </div>
+            <div class="card-footer" style="text-align: center;">
+                <div class="btn-group" style="display: flex;justify-content: space-around;">
+                    <form>
+                    <a href="/ideas" class="btn btn-outline-primary" >Back</a> 
+                    </form>
+                    <% if(currentUser && idea.author.id.equals(currentUser._id)) { %>
+                    <form>
+                    <a href="/ideas/<%= idea._id %>/edit" class="btn btn-outline-warning ">Update</a>
+                    </form>
+                    <form action="/ideas/<%= idea._id %>?_method=DELETE" method="POST">
+                        <button class="btn btn-outline-danger">Delete</button>
+                    </form>
+                    <% } %>
+                </div>
+            
+                <div class="comments">
+                    <h1>COMMENTS</h1>&nbsp;&nbsp;<a href="/ideas/<%= idea._id %>/comments/new" class="btn btn-success">Add a Comment</a>
+                      
+                            <% var i = 0; %>
+                            <div class="row" id="cmnt">
+                                <% idea.comments.forEach(function(comment) { %>
+                                    <% i+=1; %>
+                                
+                                    <div class="col-md-12" id="parent_cmnt">
+                                        <div class="child_cmnt">
+                                            <strong><%= comment.author.username %></strong>
+                                            <span class="pull-right"><%= moment(comment.createdAt).fromNow() %></span>
+                                        </div>
+                                        <p><%= comment.text %></p>
+                                        <div class="C-btn" style="display: flex;justify-content: space-between;margin-bottom:5px;">
+                                          
+                                        <% if(currentUser && comment.author.email === (currentUser.username)) {%>
+                                            <a class="btn btn-sm btn-outline-warning" href="/ideas/<%= idea._id %>/comments/<%= comment._id %>/edit">EDIT</a>
+                                            <form action="/ideas/<%= idea._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                                                <input type="submit" class="btn btn-sm btn-outline-danger" value="DELETE">
+                                            </form>
+                                            <% } %>
+                                        </div>
+                                    </div>
+                               
+                                
+                                <% }) %>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+   
+ <!-- Campground Likes Modal -->
+<div id="blogLikes" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"> Upvotes: <%= idea.likes.length %></h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                
+            </div>
+            <div class="modal-body">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Upvoted by:</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <% idea.likes.forEach(function(like) { %>
+                        <tr>
+                            <td><span class="badge"><i class="fas fa-user"></i></span> <%= like.name %></td>
+                        </tr>
+                    <% }); %>
+                    <% if (idea.likes.length === 0) { %>
+                        <tr>
+                            <td><em>No Upvotes yet.</em></td>
+                        </tr>
+                    <% } %>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include("partials/footer") %>

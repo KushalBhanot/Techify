@@ -1,0 +1,39 @@
+<%- include("partials/header") %>
+    <section id="login">
+        <div class="row">
+            <div id="login-form" class="col-lg-6">
+                <h1><a href="index.html">TECHIFY</a></h1>
+                <h3>Hello!</h3>
+                <p>Sign up to get started</p>
+
+                <form action="/ideas/<%= idea._id %>?_method=PUT" method="POST">
+                    <div class="form-group">
+                        <label for="username">Title</label>
+                        <input type="text" name="blog[title]" value="<%= idea.title %>" class="form-control" id="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Description</label>
+                        <textarea type="text" name="blog[body]" class="form-control" id="email"><%= idea.body %></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Tags(seperated by ",")</label>
+                        <itextarea type="text" name="blog[tech]" class="form-control" id="pwd"><%= idea.tech %></textarea>
+                    </div>
+                   
+                    <!-- <div class="checkbox">
+                        <label><input type="checkbox"> I agree with the Terms and conditions</label>
+                    </div> -->
+                    <button type="submit" class="btn submit-btn">Update</button>
+
+                    
+                </form>
+            </div>
+            <div id="login-img" class="col-lg-6">
+                <img width="100%" src="/assets/login-hero.gif" alt="login-hero">
+            </div>
+        </div>
+        </div>
+    </section>
+</body>
+
+</html>

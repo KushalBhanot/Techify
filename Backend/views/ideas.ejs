@@ -1,0 +1,105 @@
+<%- include("partials/header") %>
+    <nav class="navbar navbar-expand-lg selectDisable">
+        <a class="navbar-brand" href="index.html">
+            TECHIFY
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link px-4" href="/home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-4" href="/products">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-4" href="/resources">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-4 active" href="/ideas">Ideas</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+   
+        <section id="ideas-section">
+            <div class="container">
+                <% if(error && error.length > 0) { %>
+                    <div class="alert alert-danger alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <h5><%= error %></h5>
+                    </div>
+                <% } %>
+                <% if(success && success.length > 0) { %>
+                    <div class="alert alert-success alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <h5><%= success %></h5>
+                    </div>
+                <% } %>
+            </div>
+           <div class="idea-parent-container">
+            <div class="auth-container">
+                <ul class="auth-list">
+        <h1>IDEAS</h1>
+        <% if(!currentUser) { %>
+            
+            <li class="nav-item ml-auto" id="auth-out">
+                <a href="/login" class="nav-link"><button class="btn btn-lg btn-dark idea-submit-btn">Login/Submit</button></a>
+            </li>
+           
+            <% } else { %>
+                
+                <li class="nav-item ml-auto" id="auth-in" style="display: flex;flex-direction: column;">
+                    <a href="#" class="nav-link disable" ><button class="btn btn-lg badge badge-pill badge-dark" style="display: flex;justify-content:space-between;align-items: center;"><img src="<%= currentUser.image %>" class="image-fluid rounded-circle user-img"><%= currentUser.name %><i class="fas fa-angle-down"></i> </button></a>
+                </li>
+            </ul>
+            <ul class="auth-list">
+                <li class="nav-item" id="auth-out">
+                    <a href="/ideas/new" class="nav-link"><button class="btn btn-lg btn-dark idea-submit-btn">Submit</button></a>
+                </li>
+                <li class="nav-item ml-auto" id="auth-out">
+                    <a href="/logout" class="nav-link"><button class="btn btn-lg btn-dark idea-submit-btn">Logout</button></a>
+                </li>
+            </ul>
+        
+            <% } %>
+        </div>
+        <div class="show" style="display: flex;flex-direction:column;justify-content: center;align-items: center;">
+  
+            <% ideas.forEach(function(idea){ %>
+             
+             
+                <%var tags = idea.tech.split(",") %>
+                <div class="card mt-4 mb-4 ml-4 mr-4" id="idea-card" style="text-align:left;">
+                    <div class="card-container" style="display: flex;">
+                        <div class="card-body" style="display: flex;">
+                            <span class="badge badge-pill badge-secondary p-2" style="display: flex;flex-direction: column;justify-content: space-between;"><i class="fas fa-angle-double-up"></i> <p><%= idea.likes.length %></p><i class="fas fa-angle-double-down"></i></span>
+                        </div>
+                        
+                        <div class="card-body">
+                        <p class="card-text"><%= idea.author.name %>, <%= idea.createdAt.toDateString() %></p>
+                        <h4 class="card-title"><%= idea.title %></h4>
+                        <p class="card-text"><%= idea.body.substring(0,200) %> ...</p>
+                        <p class="card-text">
+                            <% tags.forEach(function(tag){ %>
+                            <span class="badge badge-pill badge-primary"><%= tag %></span>
+                            <% }) %>
+                        </p>
+                        <a href="/ideas/<%= idea._id %>" ><i class="far fa-comment-dots" style="font-size:1.2rem;">&nbsp;See More</i> </a>
+    
+                        </div>
+                    </div>
+                    
+                </div>
+            <% }) %> 
+        </div>
+        </div>
+    
+    
+    
+    </section>
+<%- include("partials/footer") %>
