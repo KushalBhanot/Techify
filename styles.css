@@ -109,7 +109,7 @@ nav {
     z-index: 5;
 }
 #hero-section h1 {
-    color: #EF6700;;
+    color: #EF6700;
     letter-spacing: 1pxs;
     font-weight: 800;
     font-size: 48px;
@@ -377,4 +377,64 @@ footer a:hover {
 }
 #signup-form a {
     color: #381e56;
+}
+
+/* resources page */
+#resources {
+    height: 90vh;
+}
+#resources h1 {
+    padding-top: 15%;
+    color: #EF6700;;
+    font-weight: 700;
+}
+.resources-btn {
+    margin-top: 30px;
+    padding: 10px 45px;
+    color: #FFF;
+    background-image: linear-gradient(to top, #E6198E, #EB47A5);
+    border-radius: 30px;
+}
+.resources-btn:hover {
+    color: #FFF;
+    box-shadow: 4px 4px 6px rgba(0,0,0,0.3);
+    background-image: linear-gradient(to top, #EB47A5, #E6198E);
+}
+
+/* scholarship & jobs section */
+#scholarships p {
+    padding-right: 10%;
+    font-size: 28px;
+    font-weight: 600;
+}
+.contribution-btn {
+    color: var(--text);
+    border: 2px solid var(--text);
+    padding: 16px 32px;
+    border-radius: 10px;
+}
+#scholarships h1, #jobs h1 {
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #e6198e;
+    font-size: 3em;
+}
+#scholarships ul, #jobs ul {
+    padding-left: 30px;
+}
+#scholarships li, #jobs li {
+    padding-top: 2px;
+    line-height: 1.75rem;
+    font-size: 1.2rem;
+}
+#scholarships a, #jobs a {
+    color: var(--text);
+}
+#scholarships a:hover, #jobs a:hover {
+    color: #e6198e;
+    text-decoration: none;
+}
+#jobs {
+    padding-bottom: 50px;
 }
