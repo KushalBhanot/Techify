@@ -142,6 +142,9 @@ nav {
 .hero-image {
     z-index: 3;
 }
+.image-width {
+    width:80% !important;
+}
 .hero-wave {
     background-color: #f7f7f7;
     margin-top: -200px;
