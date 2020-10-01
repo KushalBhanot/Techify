@@ -473,12 +473,13 @@ footer a:hover {
 
 #resources {
     height: 90vh;
+    display: flex;
+    align-items: center;
 }
 
 #resources h1 {
     padding-top: 15%;
     color: #EF6700;
-    ;
     font-weight: 700;
 }
 
@@ -498,6 +499,7 @@ footer a:hover {
 
 
 /* scholarship & jobs section */
+
 
 #scholarships p {
     padding-right: 10%;
@@ -519,18 +521,36 @@ footer a:hover {
     text-transform: uppercase;
     color: #e6198e;
     font-size: 3em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 #scholarships ul,
 #jobs ul {
+    list-style: none;
     padding-left: 30px;
 }
 
 #scholarships li,
 #jobs li {
-    padding-top: 2px;
+    background-color: #F5F5F9;
+    padding: 30px;
+    margin-bottom: 5px;
     line-height: 1.75rem;
     font-size: 1.2rem;
+}
+
+#scholarships li a,
+#jobs li a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#scholarships li:hover,
+#jobs li:hover{
+    background-color: #fdc8ff;
 }
 
 #scholarships a,
