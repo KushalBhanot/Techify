@@ -473,18 +473,66 @@ footer a:hover {
 
 #resources {
     height: 90vh;
-    display: flex;
-    align-items: center;
 }
+
 
 #resources h1 {
     padding-top: 15%;
     color: #EF6700;
+    font-size: 48px;
+    margin-top: 5%;
     font-weight: 700;
 }
 
+#resources p {
+    padding-top: 5%;
+    color: grey;
+    font-size: 1.2em;
+}
+
+#resources span {
+    color: #e6198e;
+    font-size: 1.4em;
+}
+
+@media only screen and (max-width: 990px) {
+
+    #resources {
+        height: 90vh;
+        background-image: url(assets/resources-hero.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #resources h1 {
+        padding-top: 15%;
+        color: orange;
+        font-size: 2.5em;
+        margin-top: 5%;
+        font-weight: 700;
+    }
+
+    #resources::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.45);
+    }
+
+    #resources p {
+        color: seashell;
+        padding-top: 20px;
+        font-size: 1.2em;
+    }
+
+}
+
 .resources-btn {
-    margin-top: 30px;
+    margin-top: 2%;
     padding: 10px 45px;
     color: #FFF;
     background-image: linear-gradient(to top, #E6198E, #EB47A5);
@@ -520,7 +568,7 @@ footer a:hover {
     font-weight: 700;
     text-transform: uppercase;
     color: #e6198e;
-    font-size: 3em;
+    font-size: 2.5em;
     margin-top: 1em;
     margin-bottom: 1em;
 }
@@ -528,7 +576,7 @@ footer a:hover {
 #scholarships ul,
 #jobs ul {
     list-style: none;
-    padding-left: 30px;
+    padding-left: 0px;
 }
 
 #scholarships li,
