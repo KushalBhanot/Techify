@@ -477,11 +477,12 @@ footer a:hover {
 
 
 #resources h1 {
-    padding-top: 15%;
     color: #EF6700;
-    font-size: 48px;
-    margin-top: 5%;
-    font-weight: 700;
+    letter-spacing: 1pxs;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 106%;
+    padding-top: 5%;
 }
 
 #resources p {
@@ -495,6 +496,18 @@ footer a:hover {
     font-size: 1.4em;
 }
 
+@media only screen and (max-width: 768px) {
+    #resources {
+        padding-top: 5%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    #resources {
+        padding-right: 5%;
+    }
+}
+
 @media only screen and (max-width: 990px) {
 
     #resources {
@@ -506,11 +519,9 @@ footer a:hover {
     }
 
     #resources h1 {
-        padding-top: 15%;
-        color: orange;
-        font-size: 2.5em;
         margin-top: 5%;
-        font-weight: 700;
+        font-size: 2.5em;
+        color: orange;
     }
 
     #resources::before {
