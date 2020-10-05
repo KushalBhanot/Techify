@@ -108,11 +108,16 @@ nav {
     color: #e6198e;
 }
 
+a.nav-link.px-4 {
+    margin-top: 20px;
+}
+
 .login-btn {
     color: var(--text-variant);
     background-image: linear-gradient(134deg, #e6198e, #e6198e, var(--primary-variant));
     border-radius: 30px;
     padding: 10px 45px;
+    margin-top: -10px;
 }
 
 .login-btn:hover {
