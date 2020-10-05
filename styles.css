@@ -475,15 +475,75 @@ footer a:hover {
     height: 90vh;
 }
 
+
 #resources h1 {
-    padding-top: 15%;
     color: #EF6700;
-    ;
-    font-weight: 700;
+    letter-spacing: 1pxs;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 106%;
+    padding-top: 5%;
+}
+
+#resources p {
+    padding-top: 5%;
+    color: grey;
+    font-size: 1.2em;
+}
+
+#resources span {
+    color: #e6198e;
+    font-size: 1.4em;
+}
+
+@media only screen and (max-width: 768px) {
+    #resources {
+        padding-top: 5%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    #resources {
+        padding-right: 5%;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+
+    #resources {
+        height: 90vh;
+        background-image: url(assets/resources-hero.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #resources h1 {
+        margin-top: 5%;
+        font-size: 2.5em;
+        color: orange;
+    }
+
+    #resources::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.45);
+    }
+
+    #resources p {
+        color: seashell;
+        padding-top: 20px;
+        font-size: 1.2em;
+    }
+
 }
 
 .resources-btn {
-    margin-top: 30px;
+    margin-top: 2%;
     padding: 10px 45px;
     color: #FFF;
     background-image: linear-gradient(to top, #E6198E, #EB47A5);
@@ -498,6 +558,7 @@ footer a:hover {
 
 
 /* scholarship & jobs section */
+
 
 #scholarships p {
     padding-right: 10%;
@@ -518,19 +579,37 @@ footer a:hover {
     font-weight: 700;
     text-transform: uppercase;
     color: #e6198e;
-    font-size: 3em;
+    font-size: 2.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 #scholarships ul,
 #jobs ul {
-    padding-left: 30px;
+    list-style: none;
+    padding-left: 0px;
 }
 
 #scholarships li,
 #jobs li {
-    padding-top: 2px;
+    background-color: #F5F5F9;
+    padding: 30px;
+    margin-bottom: 5px;
     line-height: 1.75rem;
     font-size: 1.2rem;
+}
+
+#scholarships li a,
+#jobs li a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#scholarships li:hover,
+#jobs li:hover{
+    background-color: #fdc8ff;
 }
 
 #scholarships a,
