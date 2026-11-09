@@ -2,7 +2,7 @@
   
 # TECHIFY - Built during HackForWomen 2020 under 12 hours
 
-**Production:** https://techify-kdc.herokuapp.com/ 
+**Live demo:** https://techify.vercel.app/ 
 
 **Develop:**
 https://techify.vercel.app/
